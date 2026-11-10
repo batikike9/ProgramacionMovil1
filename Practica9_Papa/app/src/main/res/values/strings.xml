@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mr. Potato</string>
+    <string name="titulo">Mr. Potato Head</string>
+    <string name="selecciontexto">Select a piece</string>
+    <string name="opojos">Eyes</string>
+    <string name="opnariz">Nose</string>
+    <string name="botontexto">Check positions</string>
+    <string name="instrucciones">Drag the piece onto the body</string>
+
+    </resources>

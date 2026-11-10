@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sr. Papa</string>
+    <string name="titulo">Señor Cara de Papa</string>
+    <string name="selecciontexto">Seleccionar una pieza</string>
+    <string name="opojos">Ojitos</string>
+    <string name="opnariz">Nariz</string>
+    <string name="instrucciones">Arrastra la pieza al cuerpo</string>
+    <string name="botontexto">Consultar posiciones</string>
+
+</resources>
