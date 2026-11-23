@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B132B">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.yanez.asistentebiomecanico.OverlayEsqueletoView
+        android:id="@+id/overlayEsqueleto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Banner superior de alerta -->
+    <LinearLayout
+        android:id="@+id/bannerAlerta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#94A3B8"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp">
+
+        <TextView
+            android:id="@+id/tvInfoSerie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SERIE INDIVIDUAL"
+            android:textAlignment="center"
+            android:textColor="#E2E8F0"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAlerta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="LISTO: COMIENZA EL MOVIMIENTO"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Panel inferior HUD -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="14dp"
+        android:background="#E6131F37"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="REPETICIONES"
+                    android:textColor="#94A3B8"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvContador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 / 10"
+                    android:textColor="#10B981"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEjercicioActivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Elevaciones Laterales"
+                    android:textColor="#38BDF8"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPesoActivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Carga: 10.0 kg"
+                    android:textColor="#CBD5E1"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelarSerie"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:backgroundTint="#334155"
+                android:text="CANCELAR"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnTerminarSerie"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1.3"
+                android:backgroundTint="#10B981"
+                android:text="TERMINAR SERIE"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Pantalla modal de Descanso entre series de una Rutina -->
+    <LinearLayout
+        android:id="@+id/layoutDescanso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F50B132B"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIEMPO DE DESCANSO"
+            android:textColor="#38BDF8"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSiguienteSerie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:text="Prepárate para la siguiente serie"
+            android:textColor="#94A3B8"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvSegundosDescanso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="28dp"
+            android:text="45"
+            android:textColor="#10B981"
+            android:textSize="88sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnOmitirDescanso"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#2563EB"
+            android:text="OMITIR DESCANSO"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Pantalla modal de Resumen Biomecánico Final -->
+    <LinearLayout
+        android:id="@+id/layoutResumenFinal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0B132B"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvTituloResumen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESUMEN DE ENTRENAMIENTO"
+            android:textColor="#10B981"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSubtituloResumen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sesión guardada en Registros"
+            android:textColor="#38BDF8"
+            android:textSize="14sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="16dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/contenedorTarjetasResumen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnVolverMenuResumen"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:backgroundTint="#2563EB"
+            android:text="VOLVER AL MENÚ PRINCIPAL"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

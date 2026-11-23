@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E7"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Tu nombre en la pantalla principal -->
+        <TextView
+            android:id="@+id/txtAlumno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Víctor Enrique Yáñez Medina"
+            android:textColor="#007AFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="SONIDOS DE ANIMALES"
+            android:textColor="#333333"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <!-- Botón Vaca -->
+        <ImageButton
+            android:id="@+id/btnVaca"
+            android:layout_width="180dp"
+            android:layout_height="130dp"
+            android:background="#FFFFFF"
+            android:contentDescription="Sonido de vaca"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vaca" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="18dp"
+            android:text="VACA"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Botón Perro -->
+        <ImageButton
+            android:id="@+id/btnPerro"
+            android:layout_width="180dp"
+            android:layout_height="130dp"
+            android:background="#FFFFFF"
+            android:contentDescription="Sonido de perro"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/perro" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="18dp"
+            android:text="PERRO"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Botón Gato -->
+        <ImageButton
+            android:id="@+id/btnGato"
+            android:layout_width="180dp"
+            android:layout_height="130dp"
+            android:background="#FFFFFF"
+            android:contentDescription="Sonido de gato"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gato" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="18dp"
+            android:text="GATO"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Botón León (Nuevo) -->
+        <ImageButton
+            android:id="@+id/btnLeon"
+            android:layout_width="180dp"
+            android:layout_height="130dp"
+            android:background="#FFFFFF"
+            android:contentDescription="Sonido de león"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/leon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="18dp"
+            android:text="LEÓN"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Botón Gallo (Nuevo) -->
+        <ImageButton
+            android:id="@+id/btnGallo"
+            android:layout_width="180dp"
+            android:layout_height="130dp"
+            android:background="#FFFFFF"
+            android:contentDescription="Sonido de gallo"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gallo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="24dp"
+            android:text="GALLO"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
